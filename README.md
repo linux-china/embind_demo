@@ -12,5 +12,6 @@ CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add fol
 
 # References
 
-* https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html
-* https://developers.google.cn/web/updates/2018/08/embind
+* Embind: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html
+* Emscripten’s embind: https://developers.google.cn/web/updates/2018/08/embind
+* Emscripten and npm: https://developers.google.cn/web/updates/2019/01/emscripten-npm
