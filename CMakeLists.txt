@@ -14,6 +14,6 @@ add_executable(a wasm-module1.cpp wasm-module1.h)
 set_target_properties(a PROPERTIES LINK_FLAGS "--bind")
 
 # node backend module
-add_executable(a-node wasm-module1.cpp wasm-module1.h)
-set_target_properties(a-node PROPERTIES LINK_FLAGS "--bind -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o a-node.js")
+add_executable(a_node wasm-module1.cpp wasm-module1.h)
+set_target_properties(a_node PROPERTIES LINK_FLAGS "--bind -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o a-node.js")
 
