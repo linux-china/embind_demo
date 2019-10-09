@@ -17,3 +17,4 @@ CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add fol
 * Emscripten’s embind: https://developers.google.cn/web/updates/2018/08/embind
 * Emscripten and npm: https://developers.google.cn/web/updates/2019/01/emscripten-npm
 * Replacing a hot path in your app's JavaScript with WebAssembly: https://developers.google.cn/web/updates/2019/02/hotpath-with-wasm
+* Emscripten Compiler Frontend: https://emscripten.org/docs/tools_reference/emcc.html
