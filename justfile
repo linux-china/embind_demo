@@ -8,7 +8,7 @@ server: build
 
 node_build:
    mkdir -p dist
-   emcc --bind -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o dist/a-node.js wasm-module1.cpp
+   emcc --bind -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o dist/a_node.js wasm-module1.cpp
 
 node_run: node_build
    node index.js
