@@ -107,4 +107,4 @@ CTestTestfile.cmake
 
 ### User templatte
 
-a.out.*
+dist/
