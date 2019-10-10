@@ -2,7 +2,7 @@ export EMSCRIPTEN_DIR := "/usr/local/Cellar/emscripten/1.38.44"
 
 build:
    mkdir -p dist
-   emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js -O3 wasm-module1.cpp -o dist/a.out.js
+   emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js -O3 -o dist/a.out.js wasm-module1.cpp reactive.cpp
 
 server: build
    open http://127.0.0.1:8000/index.html
@@ -10,7 +10,7 @@ server: build
 
 node_build:
    mkdir -p dist
-   emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js  -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o dist/a_node.js wasm-module1.cpp
+   emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js  -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o dist/a_node.js wasm-module1.cpp reactive.cpp
 
 node_run: node_build
    node index.js
