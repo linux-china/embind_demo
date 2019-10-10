@@ -7,27 +7,28 @@
 
 using namespace emscripten;
 
-void connect(std::string id, std::string token, std::string metadataType, std::string dataType) {
+void accept(std::string id, std::string token, std::string metadataType, std::string dataType) {
 
 }
 
-void sendOne(int id, int type, std::string metadata, std::string data) {
+void receiveOne(int id, int type, std::string metadata, std::string data) {
     val user = val::global("reactive");
     user.call<void>("sendOne", val(id), val(type), val(metadata), val(data));
 }
 
-void send(int id, int type, std::string metadata, std::string data) {
+void receive(int id, int type, std::string metadata, std::string data) {
     val user = val::global("reactive");
     user.call<void>("send", val(id), val(type), val(metadata), val(data));
 }
 
-
 // send message to upstream only once
-void upSendOne(int id, int type, std::string metadata, std::string data) {
-
+void sendOne(int id, int type, std::string metadata, std::string data) {
+    val user = val::global("reactive");
+    user.call<void>("receiveOne", val(id), val(type), val(metadata), val(data));
 }
 
 //send messages to upstream
-void upSend(int id, int type, std::string metadata, std::string data) {
-
+void send(int id, int type, std::string metadata, std::string data) {
+    val user = val::global("reactive");
+    user.call<void>("receive", val(id), val(type), val(metadata), val(data));
 }
