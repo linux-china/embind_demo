@@ -1,3 +1,11 @@
+global["reactive"] = {
+    sendOne: function (id, type, metadata, data) {
+        console.log("metadata: " + metadata)
+    },
+    send: function (id, type, metadata, data) {
+        console.log("metadata: " + metadata)
+    }
+};
 global["user"] = {
     findUserInfo: function (id) {
         console.log("user id:" + id);
