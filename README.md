@@ -9,6 +9,15 @@ CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add fol
 -DCMAKE_TOOLCHAIN_FILE=/usr/local/Cellar/emscripten/1.38.44/libexec/cmake/Modules/Platform/Emscripten.cmake
 ```
 
+# WebIDL Binder
+
+https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.html
+
+* Create WebIDL, for example hello.idl
+* Generate cpp file from idl
+* Create C++ header file with Class definition
+* Implement C++ class
+* Compile cpp to wasm and js 
 
 # References
 
