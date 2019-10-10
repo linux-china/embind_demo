@@ -1,0 +1,7 @@
+interface Hello {
+   void Hello();
+
+   long sum(long a, long b);
+
+   DOMString hello(DOMString str);
+};
