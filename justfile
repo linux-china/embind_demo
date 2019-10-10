@@ -1,3 +1,5 @@
+export EMSCRIPTEN_DIR := "/usr/local/Cellar/emscripten/1.38.44"
+
 build:
    mkdir -p dist
    emcc --bind -O3 wasm-module1.cpp -o dist/a.out.js
@@ -15,3 +17,11 @@ node_run: node_build
 
 clean:
    rm -rf dist
+
+generate:
+  python3 {{EMSCRIPTEN_DIR}}/libexec/tools/webidl_binder.py hello.idl glue
+
+webidl_build:
+  mkdir -p dist
+  emcc -std=c++1y hello.cpp glue_wrapper.cpp --post-js glue.js -o dist/hello.js
+
