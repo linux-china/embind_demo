@@ -13,6 +13,11 @@ https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.
 * Implement C++ class
 * Compile cpp to wasm and js 
 
+# Wasm call JS functions
+
+Implement a C API in JavaScript: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html
+
+
 ### Clion Integration
 
 CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add following in CMake options: 
