@@ -20,3 +20,14 @@ void send(int id, int type, std::string metadata, std::string data) {
     val user = val::global("reactive");
     user.call<void>("send", val(id), val(type), val(metadata), val(data));
 }
+
+
+// send message to upstream only once
+void upSendOne(int id, int type, std::string metadata, std::string data) {
+
+}
+
+//send messages to upstream
+void upSend(int id, int type, std::string metadata, std::string data) {
+
+}
