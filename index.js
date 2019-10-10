@@ -3,6 +3,9 @@ global["user"] = {
         console.log("user id:" + id);
         console.log("call from stubs by wasm");
         return id + 1
+    },
+    funNickById: function (id) {
+        return "nick: " + id;
     }
 };
 const Module = require('./dist/a_node');
