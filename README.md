@@ -18,7 +18,15 @@ https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.
 * Implement a C API in JavaScript: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html
 * Using val to transliterate JavaScript to C++: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html#using-val-to-transliterate-javascript-to-c
 
-### Clion Integration
+
+# Reactive communication between Wasm and Hosting
+
+* void sendOne(int id, int type, String metadata, String data)
+* void send(int id, int type, String metadata, String data)
+* void receive(int id, int type, String metadata, String data)
+
+
+# Clion Integration
 
 CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add following in CMake options: 
 
