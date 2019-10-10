@@ -108,3 +108,4 @@ CTestTestfile.cmake
 ### User templatte
 
 dist/
+glue.*
