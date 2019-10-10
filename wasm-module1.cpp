@@ -5,5 +5,6 @@ double add(double a, double b) {
 }
 
 std::string exclaim(std::string message) {
+    stub_fun1();
     return message + "!";
 }

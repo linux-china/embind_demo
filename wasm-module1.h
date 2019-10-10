@@ -14,5 +14,9 @@ EMSCRIPTEN_BINDINGS(my_module) {
     function("exclaim", &exclaim);
 }
 
+extern "C" {
+   extern void stub_fun1();
+}
+
 
 #endif //EMBIND_DEMO_WASM_MODULE1_H
