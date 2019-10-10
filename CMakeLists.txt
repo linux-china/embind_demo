@@ -17,3 +17,7 @@ set_target_properties(a PROPERTIES LINK_FLAGS "--bind")
 add_executable(a_node wasm-module1.cpp wasm-module1.h)
 set_target_properties(a_node PROPERTIES LINK_FLAGS "--bind -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o a-node.js")
 
+# webidl
+add_executable(hello hello.cpp glue_wrapper.cpp)
+set_target_properties(hello PROPERTIES LINK_FLAGS " -std=c++1y --post-js ${CMAKE_SOURCE_DIR}/glue.js")
+
