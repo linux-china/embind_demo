@@ -1,13 +1,7 @@
 Embind Demo
 ===================
 
-### Clion Integration
-
-CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add following in CMake options: 
-
-```
--DCMAKE_TOOLCHAIN_FILE=/usr/local/Cellar/emscripten/1.38.44/libexec/cmake/Modules/Platform/Emscripten.cmake
-```
+WebAssembly bind demo with embind & Web IDL
 
 # WebIDL Binder
 
@@ -19,6 +13,14 @@ https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.
 * Implement C++ class
 * Compile cpp to wasm and js 
 
+### Clion Integration
+
+CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add following in CMake options: 
+
+```
+-DCMAKE_TOOLCHAIN_FILE=/usr/local/Cellar/emscripten/1.38.44/libexec/cmake/Modules/Platform/Emscripten.cmake
+```
+
 # References
 
 * Google Developer WebAssembly: https://developers.google.cn/web/updates/tags/webassembly
@@ -27,3 +29,4 @@ https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.
 * Emscripten and npm: https://developers.google.cn/web/updates/2019/01/emscripten-npm
 * Replacing a hot path in your app's JavaScript with WebAssembly: https://developers.google.cn/web/updates/2019/02/hotpath-with-wasm
 * Emscripten Compiler Frontend: https://emscripten.org/docs/tools_reference/emcc.html
+* Web IDL: https://heycam.github.io/webidl/
