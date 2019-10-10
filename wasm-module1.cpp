@@ -10,8 +10,12 @@ double add(double a, double b) {
     return a + b;
 }
 
+int getCounter() {
+    return counter;
+}
+
 std::string exclaim(std::string message) {
-    val user = val::global("user");
     // int i = user_findUserInfo(1);
-    return message + "! " + findNickById(1);
+    counter = counter + 1;
+    return message + "! ";
 }
