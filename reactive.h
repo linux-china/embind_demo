@@ -7,7 +7,8 @@
 
 #include <string>
 
-void receive(int id, int type, std::string metadata, std::string data);
+//connect wasm with hosting
+void connect(std::string id, std::string token,std::string metadataType, std::string dataType);
 
 void sendOne(int id, int type, std::string metadata, std::string data);
 
