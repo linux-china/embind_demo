@@ -25,6 +25,7 @@ https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.
 * void send(int id, int type, String metadata, String data)
 * void receive(int id, int type, String metadata, String data)
 
+TinyFSM: a simple finite state machine library for C++, designed for optimal performance and low memory footprint. https://digint.ch/tinyfsm/index.html
 
 # Clion Integration
 
