@@ -10,11 +10,11 @@ add_definitions(-std=c++14 -O3)
 include_directories("${emscripten_dir}/libexec/system/include")
 
 # browser
-add_executable(a wasm-module1.cpp reactive.cpp)
+add_executable(a wasm-module1.cpp reactive.cpp binding.cpp)
 set_target_properties(a PROPERTIES LINK_FLAGS "--bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library  ${CMAKE_SOURCE_DIR}/library.js")
 
 # node backend module
-add_executable(a_node wasm-module1.cpp reactive.cpp)
+add_executable(a_node wasm-module1.cpp reactive.cpp binding.cpp)
 set_target_properties(a_node PROPERTIES LINK_FLAGS "--bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library  ${CMAKE_SOURCE_DIR}/library.js -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o a-node.js")
 
 # webidl
