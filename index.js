@@ -13,4 +13,6 @@ const wasm = Module({wasmBinaryFile: 'dist/a_node.wasm'});
 
 wasm.onRuntimeInitialized = function () {
     console.log(wasm.exclaim("Jackie"));
+    console.log(wasm.exclaim("Tom"));
+    console.log("counter: " + wasm.getCounter())
 };
