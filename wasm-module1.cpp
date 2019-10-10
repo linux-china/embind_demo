@@ -2,7 +2,12 @@
 
 #include <emscripten/val.h>
 
+#include "reactive.h"
+
 using namespace emscripten;
+
+//global counter
+int counter = 0;
 
 std::string findNickById(int i) {
     val user = val::global("user");
