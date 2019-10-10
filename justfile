@@ -9,7 +9,7 @@ server: build
 
 node_build:
    mkdir -p dist
-   emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js  -O2 -s WASM=1 -Wall -s MODULARIZE=1 -o dist/a_node.js wasm-module1.cpp reactive.cpp binding.cpp
+   emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js  -O3 -s WASM=1 -Wall -s MODULARIZE=1 -o dist/a_node.js wasm-module1.cpp reactive.cpp binding.cpp
 
 node_run: node_build
    node index.js
@@ -22,5 +22,5 @@ generate:
 
 webidl_build:
   mkdir -p dist
-  emcc -std=c++1y hello.cpp glue_wrapper.cpp --post-js glue.js -o dist/hello.js
+  emcc -std=c++1y -O3 hello.cpp glue_wrapper.cpp --post-js glue.js -o dist/hello.js
 
