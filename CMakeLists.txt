@@ -3,7 +3,7 @@ project(embind_demo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(emscripten_dir "/usr/local/Cellar/emscripten/1.38.44")
+set(emscripten_dir "/usr/local/opt/emscripten")
 
 add_definitions(-std=c++14 -O3)
 
