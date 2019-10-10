@@ -1,4 +1,4 @@
-export EMSCRIPTEN_DIR := "/usr/local/Cellar/emscripten/1.38.44"
+export EMSCRIPTEN_DIR := "/usr/local/opt/emscripten"
 
 build:
    mkdir -p dist
