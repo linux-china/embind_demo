@@ -5,8 +5,7 @@ build:
    emcc --bind -s ERROR_ON_UNDEFINED_SYMBOLS=0 --js-library library.js -O3 -o dist/a.out.js wasm-module1.cpp reactive.cpp
 
 server: build
-   open http://127.0.0.1:8000/index.html
-   python3 -m http.server
+   emrun index.html
 
 node_build:
    mkdir -p dist
