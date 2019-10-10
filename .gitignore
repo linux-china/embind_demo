@@ -109,3 +109,4 @@ CTestTestfile.cmake
 
 dist/
 glue.*
+*.pkl
