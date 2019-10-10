@@ -7,7 +7,7 @@
 
 using namespace emscripten;
 
-void connect(std::string id, std::string token,std::string metadataType, std::string dataType) {
+void connect(std::string id, std::string token, std::string metadataType, std::string dataType) {
 
 }
 
