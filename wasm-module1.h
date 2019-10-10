@@ -5,6 +5,9 @@
 
 using namespace emscripten;
 
+//global counter
+int counter = 0;
+
 double add(double a, double b);
 
 std::string exclaim(std::string message);
