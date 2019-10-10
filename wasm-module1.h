@@ -15,7 +15,7 @@ EMSCRIPTEN_BINDINGS(my_module) {
 }
 
 extern "C" {
-   extern void stub_fun1();
+   extern int user_findUserInfo(int i);
 }
 
 
