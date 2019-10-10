@@ -1,8 +1,8 @@
 global["reactive"] = {
-    sendOne: function (id, type, metadata, data) {
+    receiveOne: function (id, type, metadata, data) {
         console.log("metadata: " + metadata)
     },
-    send: function (id, type, metadata, data) {
+    receive: function (id, type, metadata, data) {
         console.log("metadata: " + metadata)
     }
 };
