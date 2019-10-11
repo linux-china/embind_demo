@@ -17,7 +17,19 @@ https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.
 
 * Implement a C API in JavaScript: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html
 * Using val to transliterate JavaScript to C++: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html#using-val-to-transliterate-javascript-to-c
+* Memory views and Access memory from JavaScript: 
 
+```c
+unsigned char *byteBuffer;
+
+val getBytes(offset, lenth) {
+    return val(typed_memory_view(lenth, byteBuffer+offset));
+}
+
+```
+
+* Passing and returning WebAssembly array parameters: https://becominghuman.ai/passing-and-returning-webassembly-array-parameters-a0f572c65d97
+* Access memory from JavaScript: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html
 
 # Reactive communication between Wasm and Hosting
 
