@@ -16,7 +16,8 @@ void log(std::string text) {
 
 //receive message from hosting runtime
 void service(int id, int type, std::string metadata, std::string data) {
-    log(std::move(metadata));
+    log(metadata + ":" + data);
+    send(id, type, "", "Hello " + data);
 }
 
 //send messages to hosting runtime
