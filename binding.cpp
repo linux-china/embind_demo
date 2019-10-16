@@ -12,7 +12,5 @@ EMSCRIPTEN_BINDINGS(my_module) {
     function("getCounter", &getCounter);
     function("add", &add);
     function("exclaim", &exclaim);
-    function("connect", &accept);
-    function("send", &receive);
-    function("sendOne", &receiveOne);
+    function("service", &service);
 }
