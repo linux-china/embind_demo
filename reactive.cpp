@@ -8,12 +8,12 @@
 using namespace emscripten;
 
 //receive message from hosting runtime
-void receive(int id, int type, std::string metadata, std::string data) {
+void service(int id, int type, std::string metadata, std::string data) {
 
 }
 
 //send messages to hosting runtime
 void send(int id, int type, std::string metadata, std::string data) {
     val user = val::global("wasmChannel");
-    user.call<void>("send", val(id), val(type), val(metadata), val(data));
+    user.call<void>("service", val(id), val(type), val(metadata), val(data));
 }
