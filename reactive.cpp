@@ -7,28 +7,13 @@
 
 using namespace emscripten;
 
-void accept(std::string id, std::string token, std::string metadataType, std::string dataType) {
-
-}
-
-void receiveOne(int id, int type, std::string metadata, std::string data) {
-    val user = val::global("reactive");
-    user.call<void>("sendOne", val(id), val(type), val(metadata), val(data));
-}
-
+//receive message from hosting runtime
 void receive(int id, int type, std::string metadata, std::string data) {
-    val user = val::global("reactive");
-    user.call<void>("send", val(id), val(type), val(metadata), val(data));
+
 }
 
-// send message to upstream only once
-void sendOne(int id, int type, std::string metadata, std::string data) {
-    val user = val::global("reactive");
-    user.call<void>("receiveOne", val(id), val(type), val(metadata), val(data));
-}
-
-//send messages to upstream
+//send messages to hosting runtime
 void send(int id, int type, std::string metadata, std::string data) {
-    val user = val::global("reactive");
-    user.call<void>("receive", val(id), val(type), val(metadata), val(data));
+    val user = val::global("wasmChannel");
+    user.call<void>("send", val(id), val(type), val(metadata), val(data));
 }
