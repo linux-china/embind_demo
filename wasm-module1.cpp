@@ -25,6 +25,6 @@ int getCounter() {
 std::string exclaim(std::string message) {
     // int i = user_findUserInfo(1);
     counter = counter + 1;
-    send(1, 2, "metadata", "data");
-    return message + "! ";
+    //send(1, 2, "metadata", "Wasm");
+    return message + "! !";
 }
