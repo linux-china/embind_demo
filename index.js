@@ -1,9 +1,6 @@
-global["reactive"] = {
-    receiveOne: function (id, type, metadata, data) {
-        console.log("metadata: " + metadata)
-    },
-    receive: function (id, type, metadata, data) {
-        console.log("metadata: " + metadata)
+global["wasmChannel"] = {
+    service: function (id, type, metadata, data) {
+        console.log("received: " + data)
     }
 };
 global["user"] = {
@@ -16,11 +13,11 @@ global["user"] = {
         return "nick: " + id;
     }
 };
+
 const Module = require('./dist/a_node');
-const wasm = Module({wasmBinaryFile: 'dist/a_node.wasm'});
+const wasm = Module({wasmBinaryFile: 'a_node2.wasm'});
 
 wasm.onRuntimeInitialized = function () {
     console.log(wasm.exclaim("Jackie"));
-    console.log(wasm.exclaim("Tom"));
-    console.log("counter: " + wasm.getCounter())
+    wasm.service(1,2,"metadata","Jackie");
 };
