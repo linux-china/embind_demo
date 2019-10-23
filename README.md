@@ -35,17 +35,18 @@ val getBytes(offset, lenth) {
 
 ### receive connection & messages from peer
 
-* void accept(String id, String token,String metadataType, String dataType)
-* void receiveOne(int id, int type, String metadata, String data)
+* void send(int id, int type, String metadata, String data)
 * void receive(int id, int type, String metadata, String data)
 
-### send messages to peer 
-* void send(int id, int type, String metadata, String data)
-* void send(int id, int type, String metadata, String data)
+Wasm的唯一标识在初始化wasm的js中进行设置，然后在通讯过程中进行拦截。
 
 Asyncify: https://emscripten.org/docs/porting/asyncify.html
 
 TinyFSM: a simple finite state machine library for C++, designed for optimal performance and low memory footprint. https://digint.ch/tinyfsm/index.html
+
+# Extension
+
+* EventBus: 可以利用Hosting runtime提供的EventBus特性，这样可以实现pub/sub https://nodejs.org/dist/latest-v13.x/docs/api/events.html
 
 # Clion Integration
 
